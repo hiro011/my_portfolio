@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ahmed Portfolio</title>
+		<link rel="icon" href="img/profile-pic.png" type="image/x-icon">
+        
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap">
+        <link rel="stylesheet" href="css/style.css"> 
+		
+		<script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    </head>
+    
+    <body>
+        <header>
+			<nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header> 
+
+       <!-- Introduction  -->
+       <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>Ahmed </strong> Mehamedyesuf 
+            </h1>
+            <p class="section__subtitle section__subtitle--intro"> Software and Front-End Dev </p>
+            <img src="img/ahmed01.png" alt="ahmed's picture" class="intro__img">
+		    
+			<!-- MY CV -->
+
+			<div class="flex-row">
+				<a href="cv/Ahmed_cv_2022.pdf" class="cv__link" target="_blank">
+					<h3> My CV </h3>
+				</a>
+			</div>
+	   </section>
+
+       <!-- My Services -->
+       <section class="my-services" id="services">
+            <h2 class="section__title section__title--services">What I Do</h2>
+            <div class="services">
+                <div class="service">
+                    <h3> Software Development </h3>
+                    <p>
+						I can work with a team in developing computer software 
+						or work in the maintenance or administration of existing software. 
+						I can work with Python, c++, Java, and C#.
+					</p> 
+                </div>   <!-- /service  --> 
+                
+				<div class="service">
+                    <h3> Web Development </h3>
+                    <p>
+						I can develop a custom web application that can be used in
+						different applications. I can work with HTML, CSS, Javascript, and PHP with 
+						Laravel and Livewire technologies. 
+                    </p>
+                </div>   <!-- /service  -->
+				
+                <div class="service">
+                    <h3>3D Design</h3>
+                    <p>
+						I can design different 3D models and architecture using
+						Blender 3D design software. 
+                    </p>
+                </div>   <!-- /service  -->
+            </div>   <!-- /services -->
+		 
+            <a href="#work" class="btn">My Work</a>
+       </section>
+
+       <!-- About Me -->
+       <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">Who I am</h2>
+            <p class="section__subtitle section__subtitle--about">
+                Designer & Developer
+            </p>
+
+            <div class="about-me__body">
+                <p> 
+                     My name is Ahmed Mehamedyesuf and I am a coding enthusiast who loves computer programing.
+					I would love to work on front-end web dev, python, and C# projects, and I have a fair bit of knowledge 
+					about blender 3D design software as well. I have worked on different projects. 
+					I can work with a team or solo, preferably with a team.
+                </p>
+				
+				<div class="my_skill">
+					<p class="my_skill--title">My Skills</p>
+					<div class="row">
+						<div class="column">
+							<p> <iconify-icon icon="vscode-icons:file-type-csharp2"></iconify-icon> C# </p>
+							<p> <iconify-icon icon="vscode-icons:file-type-cpp3"></iconify-icon> C++ </p>
+							<p> <i class="fab fa-python"></i> Python </p>
+							<p> <i class="fab fa-java"></i> Basic Java </p>
+							<p> <iconify-icon icon="logos:blender"></iconify-icon> Basic Blender </p>
+						</div>
+						<div class="column">
+							<p> <i class="fab fa-laravel"></i> Laravel </p>
+							<p> <iconify-icon icon="simple-icons:livewire"></iconify-icon> Livewire </p>
+							<p> <i class="fab fa-html5"></i> HTML </p>
+							<p> <i class="fab fa-css3"></i> CSS </p>
+						</div>
+					</div>
+				</div>
+
+            </div>
+            <!-- <img src="img/ahmed02.png" alt="ahmed img" class="about-me__img"> -->
+            <img src="img/ahmed02.png" alt="ahmed img" class="about-me__img">
+       </section>
+
+       <!-- My Work -->
+       <section class="my-work" id="work">
+            <h2 class="section__title">My Work</h2>
+            <p class="section__subtitle--work">A selection of my range of work</p>
+
+            <h3 class="section__title accent-title"> Web Dev and Programming </h3>
+            <div class="portfolio">
+                <!-- Portfolio item #1 DBU website --> 
+				<a href="dbu_web.html" class="portfolio__item" title="DBU website"  id="work_dbuWeb">
+					<div class="title_div">
+						<h3 class="portfolio__item--title" >DBU website </h3>
+					</div>
+                    <img src="img/dbu_page.png" alt="image" class="portfolio__img">
+                </a>
+				
+                <!-- Portfolio item #2 Clearance Processing System -->
+                <a href="clearance_system.html" class="portfolio__item" title="Clearance Processing System"   id="work_clearance">  
+					<div class="title_div">
+						<h3 class="portfolio__item--title">Clearance Processing System </h3>
+                    </div>
+					<img src="img/clearance.png" alt="clearance image" class="portfolio__img">  
+                </a>  
+                
+                <!-- Portfolio item #3 Discussion forums / comments -->
+                <a href="discussion_forum.html" class="portfolio__item" title="Discussion Forum"   id="work_comment">
+                    <div class="title_div">
+						<h3 class="portfolio__item--title">Discussion Forum </h3>
+                    </div>
+					<img src="img/disscussion_forum.png" alt="image" class="portfolio__img">
+                </a>
+                 
+                <!-- Portfolio item #4 Job Vacancy -->
+                <a href="job_vacancy.html" class="portfolio__item" title="Discussion Forum"   id="work_job_vacancy">
+                    <div class="title_div">
+						<h3 class="portfolio__item--title">Applied Job Vacancy</h3>
+                    </div>
+					<img src="img/job_vacancy.png" alt="image" class="portfolio__img">
+                </a>
+                 
+            </div>
+			
+            <h3 class="section__title accent-title">3D Designs</h3>
+			<div class="portfolio">
+                <!-- Portfolio item #1 Donut and Cofee --> 
+				<a href="donut_cofee.html" class="portfolio__item" title="Donut and Cofee"   id="work_donut">
+					<div class="title_div">
+						<h3 class="portfolio__item--title"> Donut and Cofee </h3>
+                    </div>
+					<img src="img/donut_cofee.png" alt="image" class="portfolio__img">
+                </a>
+				
+                <!-- Portfolio item #2 Sword Art Online -->
+                <a href="kirito_sword.html" class="portfolio__item" title="Kirito's Sword from SAO"   id="work_sao"> 
+					<div class="title_div"> 
+						<h3 class="portfolio__item--title"> Kirito's Sword SAO</h3>
+                    </div>
+					<img src="img/kirito_sword_sao.png" alt="image" class="portfolio__img">  
+                </a>  
+                
+                <!-- Portfolio item #3 G+2 House Model -->
+                <a href="house_model.html" class="portfolio__item" title="House Design"   id="work_house">
+					<div class="title_div">
+						<h3 class="portfolio__item--title"> House Design </h3>
+                    </div>
+					<img src="img/house_model.png" alt="image" class="portfolio__img">
+                </a>
+                
+                <!-- Portfolio item #4 OSRS POH -->
+                <a href="osrs_poh.html" class="portfolio__item" title="Old School Runescape POH"   id="work_osrs">
+					<div class="title_div">
+						<h3 class="portfolio__item--title"> OSRS POH </h3>
+                    </div>
+					<img src="img/osrs_poh.png" alt="image" class="portfolio__img">
+                </a>
+                 
+                <!-- Portfolio item #5 Chair Model -->
+                <a href="chair_model.html" class="portfolio__item" title="Chair Design"   id="work_chair">
+					<div class="title_div">
+						<h3 class="portfolio__item--title"> Chair Design </h3>
+                    </div>
+					<img src="img/chair_model.png" alt="image" class="portfolio__img">
+                </a>
+            </div>
+       
+	   </section>
+
+		<!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:mehamedseid002@gmail.com" class="footer__link">mehamedseid002@gmail.com</a>
+            <ul class="social-list">
+				<li class="social-list_item">
+                    <a href="https://github.com/hiro011" target="_blank" class="social-list__link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list_item">
+                    <a href="https://www.hackerrank.com/mehamedseid002" target="_blank" class="social-list__link">
+                        <i class="fab fa-hackerrank"></i>
+                    </a>
+                </li>
+                <li class="social-list_item">
+                    <a href="https://www.linkedin.com/in/ahmed-mehamedyesuf/" target="_blank" class="social-list__link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                 
+            </ul>
+        </footer>
+
+    </body>
+</html>

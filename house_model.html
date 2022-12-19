@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ahmed Portfolio</title>
+		<link rel="icon" href="img/profile-pic.png" type="image/x-icon">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&display=swap">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body>
+        <header>
+			<nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="home.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="home.html#services" class="nav__link">My Services</a></li>
+                    <li class="nav__item"><a href="home.html#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="home.html#work" class="nav__link">My Work</a></li>
+                </ul>
+            </nav>
+        </header> 
+		
+		<div class="back-link">
+			<a href="home.html#work_house">
+				<h3> Back to My Work </h3>
+			</a>
+		</div>
+
+       <!-- Introduction  -->
+       <section class="intro">
+            <h1 class="section__title section__title--intro">
+                <strong> House Design  </strong> 
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">Design of a G+2 house</p>
+			<img src="img/house_model.png" alt="image" class="intro__img">
+            
+       </section>
+	   
+       <div class="portfolio-item-individual">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Alias excepturi delectus nam rerum saepe repellendus optio 
+                quo consequatur! Praesentium, sequi? Aut quas ut quisquam 
+                aspernatur temporibus nesciunt est dignissimos architecto?
+            </p>
+			
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+					<span class="cbtn">
+						<i class="fa-solid fa-chevron-left ibtn" onclick="nextImage(-1)"></i>
+					</span>
+					<div class="modal_slide">
+						<span class="close">&times;</span>
+						<img src="" id="modal-image" class="modal-image" />
+					</div>
+					<span class="cbtn">
+						<i class="fa-solid fa-chevron-right ibtn" onclick="nextImage(1)"></i>
+					</span>
+                </div>
+            </div>
+
+			<div class="portfolio">
+				<!-- House Model #1 -->
+				<div class="portfolio__item">
+					<img src="img/design_img/house_model (1).png" alt="image" class="portfolio__img" onclick="imageShow(this)">
+                </div>
+				
+				<!-- House Model #2 -->
+				<div class="portfolio__item">
+					<img src="img/design_img/house_model (2).png" alt="image" class="portfolio__img" onclick="imageShow(this)">
+                </div>
+				
+				<!-- House Model #3 -->
+				<div class="portfolio__item">
+					<img src="img/design_img/house_model (3).png" alt="image" class="portfolio__img" onclick="imageShow(this)">
+                </div>
+				
+				<!-- House Model #4 -->
+				<div class="portfolio__item">
+					<img src="img/design_img/house_model (4).png" alt="image" class="portfolio__img" onclick="imageShow(this)">
+                </div>
+			</div>
+       </div>
+
+		<!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:mehamedseid002@gmail.com" class="footer__link">mehamedseid002@gmail.com</a>
+            <ul class="social-list">
+				<li class="social-list_item">
+                    <a href="https://github.com/hiro011" target="_blank" class="social-list__link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list_item">
+                    <a href="https://www.hackerrank.com/mehamedseid002" target="_blank" class="social-list__link">
+                        <i class="fab fa-hackerrank"></i>
+                    </a>
+                </li>
+                <li class="social-list_item">
+                    <a href="https://www.linkedin.com/in/ahmed-mehamedyesuf/" target="_blank" class="social-list__link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                 
+            </ul>
+        </footer>
+
+       <script src="js/index2.js"></script>
+
+    </body>
+</html>
