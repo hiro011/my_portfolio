@@ -1,0 +1,14 @@
+
+git add .
+git commit -m "message"
+git push
+
+git push main
+git push origin main
+git push --set-upstream [name] main
+git push --force 
+
+git branch  // show branches
+git branch main  // create branch main
+git checkout main  // make main active branch
+
