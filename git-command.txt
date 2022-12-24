@@ -8,6 +8,8 @@ git push origin main
 git push --set-upstream [name] main
 git push --force 
 
+git commit --ammend -m "message" 
+
 git branch  // show branches
 git branch main  // create branch main
 git checkout main  // make main active branch
