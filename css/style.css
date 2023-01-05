@@ -105,6 +105,10 @@ h1 { font-size: var(--fs-h1);}
 h2 { font-size: var(--fs-h2);}
 h3 { font-size: var(--fs-h3);}
 
+li a:hover{
+	opacity: 0.7
+}
+
 .section__title{
     margin-bottom: .25em;
 }
