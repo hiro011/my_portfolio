@@ -370,7 +370,7 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-.portfolio {
+.portfolio, .portfolio_home {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
@@ -521,18 +521,20 @@ nav ul li a:hover {
 
 /* Style for image modal */
 .modal {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   display: none; /* Hidden by default */
   height: 100%; /* Full height */
+  width: 100%; /* Full width */
   left: 0;
+  top: 0;
   overflow: auto; /* Enable scroll if needed */
   position: fixed; /* Stay in place */
-  top: 0;
-  width: 100%; /* Full width */
-  z-index: 55; /* Sit on top */
+  z-index: 100; /* Sit on top */
 }
 
 .modal-content {
+  height: 70%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
