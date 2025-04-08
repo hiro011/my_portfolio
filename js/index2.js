@@ -1,53 +1,73 @@
-// -- script to show image in big --
-var modal = document.getElementById("myModal");
-var modalImage = document.getElementById("modal-image");
-var closeBtn = document.getElementsByClassName("close")[0];
+document.addEventListener('DOMContentLoaded', () => {
+  // -- Image Modal --
+  const modal = document.getElementById('myModal');
+  const modalImage = document.getElementById('modal-image');
+  const closeBtn = document.querySelector('.close');
+  const portfolioImages = document.querySelectorAll('.portfolio__img'); // Select all portfolio images
 
-function imageShow(img) {
-  modal.style.display = "block";
-  modalImage.src = img.src;
-}
-
-// slide image button
-var slideIndex = 1;
-function nextImage(m) {
-  showSlides((slideIndex += m));
-}
-
-function showSlides(n) {
-  var slides = document.getElementsByClassName("portfolio__img");
-  var img;
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
   }
 
-  img = slides[slideIndex - 1];
-  imageShow(img);
-}
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
 
-// When the user clicks on <span> (x), close the modal
-closeBtn.onclick = function () {
-  modal.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  function openModal(imageSrc) {
+    modal.style.display = 'block';
+    modalImage.src = imageSrc;
   }
-};
 
-// scroll to top button
-var Tbtn = document.getElementById("upButton");
+  // -- Image Slider --
+  let slideIndex = 0; // Initialize to 0 for array indexing
 
-window.onscroll = () => {
-  showTopbtn();
-};
-function toggleTopbtn() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-function showTopbtn() {}
+  function showSlides(index) {
+    if (index < 0) {
+      slideIndex = portfolioImages.length - 1;
+    } else if (index >= portfolioImages.length) {
+      slideIndex = 0;
+    } else {
+      slideIndex = index;
+    }
+    if (portfolioImages.length > 0) {
+      openModal(portfolioImages[slideIndex].src);
+    }
+  }
+
+  function nextImage(n) {
+    showSlides(slideIndex + n);
+  }
+
+  // Attach click event listeners to portfolio images to open the modal
+  portfolioImages.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      showSlides(index); // Show the clicked image in the modal
+    });
+  });
+
+  // -- Scroll to Top Button --
+  const topButton = document.getElementById('upButton');
+
+  function toggleTopButtonVisibility() {
+    if (window.scrollY > 130) {
+      topButton.style.display = 'block'; // Make sure the button is visible
+    } else {
+      topButton.style.display = 'none'; // Hide when at the top
+    }
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  if (topButton) {
+    topButton.addEventListener('click', scrollToTop);
+    window.addEventListener('scroll', toggleTopButtonVisibility);
+    toggleTopButtonVisibility(); // Initial check on load
+  }
+
+});
