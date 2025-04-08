@@ -157,11 +157,57 @@ li a:hover {
 
 
 /* header */
-
+/*
 header {
   display: flex;
   justify-content: space-between;
   padding: 1em;
+} 
+
+/* Header */
+header {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+#nav-bar {
+    position: static;
+    top: 0;
+    width: 100%;
+    background: #0d47a1;
+    padding: 3px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    background: #1565c0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #1976d2;
 }
 
 .nav {
